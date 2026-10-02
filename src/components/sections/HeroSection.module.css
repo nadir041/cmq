@@ -1,0 +1,187 @@
+.hero {
+  position: relative;
+  background-color: var(--color-primary);
+  background-image:
+    url('/src/assets/hero-background.webp'),
+    linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 24px 72px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+.enrollmentNotice {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+  padding: 16px 24px;
+  background: #104335;
+  color: var(--color-white);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(15, 61, 38, 0.18);
+}
+
+.enrollmentNotice p {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 67, 53, 0.75);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 90%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.agentCard {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  max-width: 560px;
+  width: min(100%, 560px);
+  box-shadow: none;
+}
+
+.agentAvatar {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agentAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.agentLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.agentDesc {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(13px, 1.6vw, 18px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+.phoneNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: opacity var(--transition);
+  margin: 0 auto 8px;
+  width: max-content;
+}
+
+.phoneNumber::before {
+  content: none;
+}
+
+.phoneNumber:hover {
+  opacity: 0.88;
+}
+
+.phoneHours {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 56px 20px 52px;
+  }
+
+  .enrollmentNotice {
+    padding: 14px 18px;
+  }
+
+  .enrollmentNotice p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .agentCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .agentAvatar {
+    margin: 0 auto;
+  }
+
+  .agentDesc br {
+    display: none;
+  }
+}

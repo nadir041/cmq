@@ -1,0 +1,155 @@
+.header {
+  background-color:#104335;
+  border-bottom: 1px solid var(--color-border);
+  position: static;
+  box-shadow: var(--shadow-sm);
+}
+
+body {
+  padding-top: 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: inline-flex;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+
+.logoText {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.logoName {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+}
+
+.logoTagline {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--color-text-light);
+  letter-spacing: 0.02em;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ffffff; */
+  color: #ffffff;
+  padding: 8px 14px;
+  /* border-radius: 10px; */
+  /* border: 1px solid rgba(16, 67, 53, 0.15); */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); */
+  text-align: center;
+  min-width: 250px;
+  margin-top: -15px;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-c;
+  gap: 8px;
+}
+
+.contactLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  animation: headerPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes headerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.93;
+  }
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoImage {
+  width: 120px;      
+  height: auto;
+  display: block;
+}
+.logoSubtext {
+  font-size: 11px;
+  color: #ffffff;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+.contactPhone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.contactPhone:hover {
+  opacity: 0.85;
+}
+
+.contactHours {
+  font-size: 14px;
+  margin-top: -8px;
+  opacity: 0.9;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactPhone {
+    justify-content: center;
+  }
+}

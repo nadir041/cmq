@@ -1,0 +1,261 @@
+.footer {
+  font-family: var(--font-body);
+  padding-top: 25px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Disclosures */
+.disclosures {
+  background-color: var(--color-primary-dark);
+  padding: 48px 0;
+  border-top: 4px solid var(--color-border);
+}
+
+.disclosuresTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffff;
+  margin-bottom: 16px;
+}
+
+.disclosures p {
+  font-size: 14px;
+  color: #ffff;
+  line-height: 1.65;
+  margin-bottom: 8px;
+font-family: 'Poppins', sans-serif;
+}
+
+.link {
+  color: rgb(88, 88, 245);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+
+
+/* Main Footer */
+.main {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 48px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.colTitle {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  
+}
+
+/* Contact col */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactList li {
+  list-style: none !important;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+  margin-left: -70px;
+  
+}
+
+
+
+.contactLabel {
+  font-weight: 600;
+  color: var(--color-white);
+  margin-right: 4px;
+}
+
+
+
+
+.contactLink {
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+.contactLink:hover {
+  color: var(--color-white);
+}
+
+/* CTA col */
+.ctaText {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 8px;
+}
+
+.ctaPhone {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-decoration: none;
+  margin-bottom: 4px;
+  transition: opacity var(--transition);
+}
+
+.ctaPhone:hover {
+  opacity: 0.85;
+}
+
+.ctaHours {
+  
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 16px;
+}
+
+.secureWrapper {
+  display: flex;
+}
+
+.secureBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 110px;
+}
+
+/* Brand col */
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandMark {
+  
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandC {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+}
+
+.brandHours {
+  margin-top: 40px !important;
+  font-size: 16px;
+  color: white;
+}
+
+.brandCode {
+  font-size: 15px;
+  color: white;
+  font-family: monospace;
+}
+
+/* Bottom bar */
+.bottom {
+  background-color: var(--color-primary-dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 0;
+}
+
+.bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copyright {
+  font-size: 16px;
+  color: white;
+}
+
+.bottomNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.bottomLink {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.bottomLink:hover {
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .bottom .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottomNav {
+    gap: 12px;
+  }
+}
+.owner {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 16px;
+}
