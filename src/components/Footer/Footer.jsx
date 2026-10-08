@@ -86,9 +86,9 @@ const Footer = memo(function Footer() {
             <Link to="/marketing-partners" className={styles.bottomLink}>Marketing Partners</Link>
           </nav>
         </div>
- {/* <p className={styles.owner}>
+ /<p className={styles.owner}>
       This website is owned and operated by Lead Source Co
-    </p>       */}
+    </p>       
     </div>
     </footer>
   )
