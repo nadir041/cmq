@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from "react";
+import React, { useState, useCallback, memo, useEffect } from "react";
 import styles from "./Form.module.css";
 
 const CheckIcon = () => (
@@ -48,6 +48,39 @@ const Form = memo(function Form() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [touched, setTouched] = useState({});
+
+
+
+
+
+
+
+
+
+const [userIp, setUserIp] = useState("");
+
+useEffect(() => {
+  const controller = new AbortController();
+
+  fetch("https://api.ipify.org?format=json", {
+    signal: controller.signal,
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error(`IP lookup failed: ${response.status}`);
+      return response.json();
+    })
+    .then(({ ip }) => setUserIp(ip))
+    .catch((error) => {
+      if (error.name !== "AbortError") {
+        console.error("Could not fetch user IP:", error);
+      }
+    });
+
+  return () => controller.abort();
+}, []);
+
+
+
 
   const handleChange = useCallback(
     (e) => {
@@ -232,7 +265,7 @@ const Form = memo(function Form() {
         type="hidden"
         value=""
       ></input>
-      <input type="hidden" name="user_ip" id="user_ip"></input>
+      <input type="hidden" name="user_ip" id="user_ip" value={userIp} readOnly></input>
       <button type="submit" id="submit" className={styles.submitBtn}>
         submit
       </button>
